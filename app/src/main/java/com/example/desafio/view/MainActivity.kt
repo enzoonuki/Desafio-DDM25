@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent);
+
         var btnCadastro = findViewById<Button>(R.id.btn_salvar)
         var edtNome = findViewById<EditText>(R.id.edt_nome)
         var edtValor = findViewById<EditText>(R.id.edt_valor)

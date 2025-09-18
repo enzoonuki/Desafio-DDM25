@@ -21,7 +21,6 @@ class UsuarioAdapter(private val usuarios: MutableList<Usuario>) : RecyclerView.
         val textViewValor: TextView = itemView.findViewById(R.id.item_valor)
         val imgViewImagem: ImageView = itemView.findViewById(R.id.item_img)
         val holderView = itemView
-        val teste: TextView = itemView.findViewById(R.id.textView2)
         val btnDelete: Button = itemView.findViewById(R.id.btn_delete)
         val btnUpdate: Button = itemView.findViewById(R.id.btn_edit)
     }
@@ -37,7 +36,6 @@ class UsuarioAdapter(private val usuarios: MutableList<Usuario>) : RecyclerView.
         holder.textViewNome.text = usuario.nome
         holder.textViewValor.text = usuario.valor
         Glide.with(holder.holderView.context.applicationContext).load(usuario.imagem).into(holder.imgViewImagem)
-        holder.teste.text = usuario.imagem;
 
         holder.btnDelete.setOnClickListener {
             dao.deletaUsuario(position)
