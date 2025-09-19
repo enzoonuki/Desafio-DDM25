@@ -24,8 +24,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         val fabLogin = findViewById<FloatingActionButton>(R.id.fab_login)
-        val nome = findViewById<EditText>(R.id.editTextText)
-        val senha = findViewById<EditText>(R.id.editTextText2)
+        val nome = findViewById<EditText>(R.id.edit_text_name)
+        val senha = findViewById<EditText>(R.id.edit_text_pass)
 
         fabLogin.setOnClickListener {
             if (nome.text.toString() == "Name" && senha.text.toString() == "Pass")
